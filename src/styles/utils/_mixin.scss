@@ -1,0 +1,30 @@
+// 폰트
+@mixin font($size: 1.6rem, $weight: normal, $height: 1.6rem, $spacing: 0) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+    letter-spacing: $spacing;
+}
+
+// 반응형
+$mobile: 340px;
+$tablet: 744px;
+$desktop: 1060px;
+
+@mixin mobile {
+    @media screen and (min-width: #{mobile}) and (max-width: #{tablet}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: #{tablet}) and (max-width: #{desktop}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: #{desktop}) {
+        @content;
+    }
+}
