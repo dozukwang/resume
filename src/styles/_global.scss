@@ -45,6 +45,12 @@ h6 {
     @include font(1.4rem, 100);
 }
 
+#resume {
+    display: flex;
+    min-width: 100%;
+    justify-content: center;
+}
+
 :root {
     // 컬러변수 설정
     @each $color, $value in $colorBoard {
