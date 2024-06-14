@@ -3,6 +3,10 @@
 @import "utils/_color.scss";
 @import "utils/_mixin.scss";
 
+@function hexToRGB($hex) {
+    @return red($hex), green($hex), blue($hex);
+}
+
 // 폰트
 html,
 body {
@@ -15,17 +19,17 @@ body {
     font-size: 10px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: var(--black-700);
+    color: rgb(var(--black-700));
 }
 
 h1 {
     @include font(3.6rem, 800, 4rem);
-    color: hsla(var(--black-800), 1);
+    color: var(--black-800);
 }
 
 h2 {
     @include font(3rem, 800, 3rem);
-    color: hsla(var(--black-800), 1);
+    color: var(--black-800);
 }
 
 h3 {
@@ -34,7 +38,7 @@ h3 {
 
 h4 {
     @include font(1.8rem, 700);
-    color: hsla(var(--black-500), 1);
+    color: var(--black-500);
 }
 
 h5 {
@@ -53,9 +57,9 @@ h6 {
 
 :root {
     // 컬러변수 설정
-    @each $color, $value in $colorBoard {
-        @each $number, $code in $value {
-            --#{color}-#{number}: #{code};
+    @each $colorType, $colorMap in $colorBoard {
+        @each $number, $code in $colorMap {
+            --#{$colorType}-#{$number}: #{hexToRGB($code)};
         }
     }
 }
