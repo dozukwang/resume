@@ -1,4 +1,4 @@
-import styles from "components/Element/Element.module.scss"
+import styles from "components/Elements/Elements.module.scss"
 import { iTag } from "data/components/Elements/Elements"
 
 const Tag = ({ type, color, message, fontSize = 16 }: iTag) => {
@@ -19,6 +19,7 @@ const Tag = ({ type, color, message, fontSize = 16 }: iTag) => {
                     <div
                         key={`${msg}_${index}`}
                         style={{ fontSize: `${fontSize}px` }}
+                        className={styles.tag}
                         data-color={color}
                         data-type={type}
                         data-size={fontSize}

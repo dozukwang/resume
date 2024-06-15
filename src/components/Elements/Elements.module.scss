@@ -1,5 +1,6 @@
 .tag {
     display: flex;
+    width: fit-content;
     padding: 8px;
     justify-content: center;
     align-items: center;
@@ -15,6 +16,7 @@
 
     &[data-type="glow"] {
         box-shadow: 1px 2px 4.6px 0px rgba(244, 88, 88, 0.2) inset;
+        font-weight: 300;
     }
 
     // color
