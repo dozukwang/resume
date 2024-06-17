@@ -15,7 +15,11 @@ const Navigation = () => {
     return (
         <div className={styles.navigation}>
             {menus.map((menu) => (
-                <a data-active={section === menu.name} href={`#${menu.ref}`}>
+                <a
+                    key={menu.name}
+                    data-active={section === menu.name}
+                    href={`#${menu.ref}`}
+                >
                     {menu.name}
                 </a>
             ))}

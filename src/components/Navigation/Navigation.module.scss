@@ -14,7 +14,7 @@
 
     z-index: 100;
 
-    &::before {
+    &::after {
         content: "";
         position: absolute;
         top: 0;
@@ -25,6 +25,8 @@
         background-image: url("/../public/images/nav_noise.png");
         mix-blend-mode: color-burn;
         opacity: 0.6;
+
+        pointer-events: none;
     }
 
     a {
