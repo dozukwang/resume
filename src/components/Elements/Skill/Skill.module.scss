@@ -1,10 +1,65 @@
+.skillCard {
+    display: flex;
+    flex-direction: column;
+    width: 178px;
+    height: 120px;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid rgb(var(--black-200));
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        width: 152px;
+        gap: 8px;
+
+        img {
+            width: 40px;
+            aspect-ratio: 1;
+        }
+    }
+}
+
+.skillLine {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-size: 24px;
+
+    img {
+        width: 40px;
+        aspect-ratio: 1;
+    }
+}
+
 .level {
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+
+    &__detail {
+        display: flex;
+        height: 32px;
+        gap: 4px;
+        align-items: center;
+        &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+        }
+    }
+
     &__progress {
         position: relative;
 
         height: 16px;
         border-radius: 8px;
-        background-color: rgb(var(--black-300));
+        background-color: rgb(var(--black-100));
 
         &::after {
             content: "";
@@ -12,7 +67,35 @@
             left: 0;
             top: 0;
             bottom: 0;
-            right: 20%;
+            border-radius: 8px;
+        }
+    }
+
+    $progressColor: (
+        "good": (
+            color: rgb(var(--red-600)),
+            right: 14%
+        ),
+        "normal": (
+            color: rgb(var(--red-300)),
+            right: 40%
+        ),
+        "used": (
+            color: rgb(var(--black-300)),
+            right: 70%
+        )
+    );
+
+    @each $level, $property in $progressColor {
+        &[data-level="#{$level}"] {
+            & > div::before,
+            & > div::after {
+                background-color: map-get($property, color);
+            }
+
+            & > div:nth-child(2)::after {
+                right: map-get($property, right);
+            }
         }
     }
 }

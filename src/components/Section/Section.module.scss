@@ -17,3 +17,29 @@
         word-break: keep-all;
     }
 }
+
+.skills {
+    display: flex;
+    padding: 12px 20px;
+    gap: 32px;
+
+    &__type {
+        min-width: 150px;
+        font-size: 26px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: flex-start;
+        align-content: flex-start;
+        flex-wrap: wrap;
+
+        &--card {
+            gap: 12px;
+        }
+
+        &--line {
+            gap: 27px;
+        }
+    }
+}

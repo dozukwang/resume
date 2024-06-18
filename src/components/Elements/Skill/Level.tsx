@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react"
+import { useRef } from "react"
 import {
     iLevel,
     iLevelList
@@ -7,26 +7,16 @@ import styles from "./Skill.module.scss"
 
 const Level = ({ level }: iLevel) => {
     const progressRef = useRef(null)
+
     const levelList: iLevelList = {
-        good: { message: "개발/업무 가능", color: "rgb(var(--reg-600))" },
-        normal: { message: "활용 가능", color: "rgb(var(--reg-600))" },
-        used: { message: "사용경험 있음", color: "rgb(var(--reg-600))" }
+        good: "개발/업무 가능",
+        normal: "활용 가능",
+        used: "사용경험 있음"
     }
 
-    useEffect(() => {
-        if (progressRef.current) {
-            const afterElement = document.querySelector(
-                `.${styles.level__progress}::after`
-            ) as HTMLElement
-
-            if (afterElement)
-                afterElement.style.backgroundColor = levelList[level].color
-        }
-    }, [level])
-
     return (
-        <div data-level={level}>
-            <div>{levelList[level].message}</div>
+        <div data-level={level} className={styles.level}>
+            <div className={styles.level__detail}>{levelList[level]}</div>
             <div ref={progressRef} className={styles.level__progress} />
         </div>
     )
