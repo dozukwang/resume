@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { iMenus, menuNames } from "../../data/components/Navigation/Navigation"
+import { iMenus, menuNames } from "data/Navigation/Navigation"
 import styles from "./Navigation.module.scss"
 
 const Navigation = () => {

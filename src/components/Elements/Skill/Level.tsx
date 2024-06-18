@@ -1,8 +1,5 @@
 import { useRef } from "react"
-import {
-    iLevel,
-    iLevelList
-} from "../../../data/components/Elements/Skill/Skill"
+import { iLevel, iLevelList } from "data/Elements/Skill/Skill"
 import styles from "./Skill.module.scss"
 
 const Level = ({ level }: iLevel) => {

@@ -1,5 +1,5 @@
 import styles from "./Section.module.scss"
-import { iSkillDetail, iSkillList } from "data/components/Elements/Skill/Skill"
+import { iSkillDetail, iSkillList } from "data/Elements/Skill/Skill"
 import Divider from "../Elements/Divider"
 import SkillCard from "components/Elements/Skill/SkillCard"
 

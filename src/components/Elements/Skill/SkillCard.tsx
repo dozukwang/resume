@@ -1,4 +1,4 @@
-import { iSkillCard } from "data/components/Elements/Skill/Skill"
+import { iSkillCard } from "data/Elements/Skill/Skill"
 import Level from "./Level"
 import styles from "./Skill.module.scss"
 
