@@ -28,7 +28,7 @@ h1 {
 }
 
 h2 {
-    @include font(3rem, 800, 3rem);
+    @include font(3rem, 700, 3rem);
     color: var(--black-800);
 }
 

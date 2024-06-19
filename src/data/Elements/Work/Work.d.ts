@@ -1,3 +1,5 @@
+import { ReactElement } from "react"
+
 // 데이터
 export interface iWorkHistory {
     working: boolean
@@ -6,9 +8,13 @@ export interface iWorkHistory {
     company: string
     team: string
     position: string
-    summary: string
-    detail: string[]
-    else?: string
+    details: iDetails
+}
+
+export interface iDetails {
+    summary: ReactElement
+    task: string[]
+    else?: string[]
     stacks: string[]
 }
 

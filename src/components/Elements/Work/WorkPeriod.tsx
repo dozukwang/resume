@@ -16,7 +16,7 @@ const WorkPeriod = ({ working, startDate, endDate }: iWorkPeriod) => {
     const calculateDuration = () => {
         const diffMonths =
             (endDate.getFullYear() - startDate.getFullYear()) * 12 +
-            (endDate.getMonth() - startDate.getMonth())
+            (endDate.getMonth() - startDate.getMonth() + 1)
         const years = Math.floor(diffMonths / 12)
         const months = diffMonths % 12
 
@@ -33,7 +33,7 @@ const WorkPeriod = ({ working, startDate, endDate }: iWorkPeriod) => {
 
     const changeDateFormat = (date: Date) => {
         const year = date.getFullYear()
-        const month = date.getDate()
+        const month = date.getMonth() + 1
         return `${year}.${month}`
     }
 

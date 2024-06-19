@@ -1,6 +1,7 @@
 .tag {
     display: flex;
-    width: fit-content;
+    min-width: fit-content;
+    word-break: keep-all;
     padding: 8px;
     justify-content: center;
     align-items: center;
