@@ -105,13 +105,17 @@ const Skills = () => {
             {/* 카드형 스킬 */}
             {Object.keys(cardSkillList).map((type: string) => {
                 return (
-                    <div className={styles.skills}>
+                    <div className={styles.skills} key={type}>
                         <div className={styles.skills__type}>{type}</div>
                         <div
                             className={`${styles.skills__list} ${styles["skills__list--card"]}`}
                         >
                             {cardSkillList[type].map((detail: iSkillDetail) => (
-                                <SkillCard type="card" detail={detail} />
+                                <SkillCard
+                                    key={detail.name}
+                                    type="card"
+                                    detail={detail}
+                                />
                             ))}
                         </div>
                     </div>
@@ -120,13 +124,17 @@ const Skills = () => {
             {/* 글자형 스킬 */}
             {Object.keys(lineSkillList).map((type: string) => {
                 return (
-                    <div className={styles.skills}>
+                    <div className={styles.skills} key={type}>
                         <div className={styles.skills__type}>{type}</div>
                         <div
                             className={`${styles.skills__list} ${styles["skills__list--line"]}`}
                         >
                             {lineSkillList[type].map((detail: iSkillDetail) => (
-                                <SkillCard type="line" detail={detail} />
+                                <SkillCard
+                                    key={detail.name}
+                                    type="line"
+                                    detail={detail}
+                                />
                             ))}
                         </div>
                     </div>

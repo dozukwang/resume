@@ -1,0 +1,108 @@
+.period {
+    font-size: 22px;
+    width: 150px;
+    padding-top: 4.4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    &--end {
+        text-align: right;
+    }
+}
+
+.detail {
+    display: flex;
+    width: 100%;
+    max-width: 720px;
+    flex-direction: column;
+    gap: 20px;
+
+    word-break: keep-all;
+
+    &__project {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h4 {
+            color: rgb(var(--black-500));
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__buttonGroup {
+            display: flex;
+            gap: 10px;
+        }
+    }
+
+    &__description {
+        display: flex;
+        padding: 18px 24px;
+        flex-direction: column;
+        gap: 12px;
+        border-radius: 24px;
+        font-size: 18px;
+        background: rgb(var(--black-100));
+
+        &__badge {
+            display: flex;
+            width: fit-content;
+            padding: 4px 8px;
+            font-weight: 600;
+            color: rgb(var(--other-green-50));
+            border-radius: 8px;
+            background: rgb(var(--black-700));
+        }
+    }
+
+    &__task {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        font-size: 20px;
+
+        &__box {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        &__header {
+            display: flex;
+            font-weight: 700;
+            span {
+                width: 20px;
+                color: rgb(var(--red-600));
+                font-size: 22px;
+            }
+        }
+
+        &__list {
+            font-weight: 400;
+            line-height: 30px;
+            padding-left: 20px;
+
+            li {
+                display: flex;
+                gap: 6px;
+            }
+
+            li::before {
+                content: "•";
+                display: block;
+                left: 0;
+                top: 0;
+                line-height: inherit;
+            }
+        }
+    }
+}

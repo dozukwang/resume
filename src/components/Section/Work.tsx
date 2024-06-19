@@ -96,16 +96,18 @@ const Work = () => {
             className={`${styles.layout} ${styles.work}`}
         >
             <Divider category="Work Experience" />
-            {workHistory.map((history: any) => (
-                <div className={styles.work}>
-                    <WorkPeriod
-                        working={history.working}
-                        startDate={history.startDate}
-                        endDate={history.endDate ?? new Date()}
-                    />
-                    <WorkDetail history={history} />
-                </div>
-            ))}
+            <div>
+                {workHistory.map((history) => (
+                    <div className={styles.work__detail}>
+                        <WorkPeriod
+                            working={history.working}
+                            startDate={history.startDate}
+                            endDate={history.endDate ?? new Date()}
+                        />
+                        <WorkDetail history={history} />
+                    </div>
+                ))}
+            </div>
         </section>
     )
 }

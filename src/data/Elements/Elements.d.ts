@@ -8,3 +8,8 @@ export interface iTag {
 export interface iDivider {
     category: string
 }
+
+export interface iButton {
+    iconName: string,
+    link?: string
+}
