@@ -1,0 +1,85 @@
+.period {
+    font-size: 22px;
+    width: 150px;
+    padding-top: 4.4px;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    gap: 10px;
+
+    &__tag {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+    }
+
+    &--end {
+        text-align: right;
+    }
+}
+
+.detail {
+    display: flex;
+    max-width: 720px;
+    flex-direction: column;
+    gap: 24px;
+
+    h4 {
+        color: rgb(var(--black-500));
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    &__company {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.details {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+
+    & > div,
+    & > ul {
+        word-break: keep-all;
+        height: fit-content;
+    }
+
+    b {
+        font-weight: 600;
+    }
+
+    &__index {
+        min-width: 70px;
+        h3 {
+            font: inherit;
+        }
+    }
+
+    &__task {
+        li {
+            display: flex;
+            gap: 6px;
+        }
+        li::before {
+            content: "•";
+            display: block;
+            left: 0;
+            top: 0;
+            line-height: inherit;
+        }
+    }
+
+    &__stacks {
+        display: flex;
+        height: 40px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}

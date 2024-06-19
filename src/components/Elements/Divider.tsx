@@ -1,5 +1,5 @@
 import styles from "components/Elements/Elements.module.scss"
-import { iDivider } from "data/components/Elements/Elements"
+import { iDivider } from "data/Elements/Elements"
 
 const Divider = ({ category }: iDivider) => {
     return (

@@ -1,6 +1,7 @@
 .tag {
     display: flex;
-    width: fit-content;
+    min-width: fit-content;
+    word-break: keep-all;
     padding: 8px;
     justify-content: center;
     align-items: center;
@@ -53,5 +54,25 @@
         height: 4px;
         border-radius: 4px;
         background-color: rgb(var(--red-600));
+    }
+}
+
+.button {
+    position: relative;
+    display: flex;
+    padding: 8px;
+    font-size: 24px;
+    color: rgb(var(--other-blue));
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: rgba(var(--black-300), 0.2);
+
+    a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
     }
 }

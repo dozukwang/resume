@@ -1,5 +1,5 @@
 import styles from "components/Elements/Elements.module.scss"
-import { iTag } from "data/components/Elements/Elements"
+import { iTag } from "data/Elements/Elements"
 
 const Tag = ({ type, color, message, fontSize = 16 }: iTag) => {
     return (

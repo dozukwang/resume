@@ -1,0 +1,43 @@
+.navigation {
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 0 20px;
+    gap: 12px;
+
+    background-color: rgba(var(--other-white), 0.8);
+    backdrop-filter: blur(4px);
+
+    z-index: 100;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        background-image: url("/../public/images/nav_noise.png");
+        mix-blend-mode: color-burn;
+        opacity: 0.6;
+
+        pointer-events: none;
+    }
+
+    a {
+        min-width: 74px;
+        max-width: 120px;
+        padding: 4px 0;
+        font-size: 18px;
+        text-align: center;
+
+        &[data-active="true"] {
+            color: rgb(var(--red-600));
+        }
+    }
+}
