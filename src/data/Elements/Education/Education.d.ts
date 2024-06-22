@@ -20,6 +20,7 @@ interface iFieldList {
 // 컴포넌트
 export type tField = {
     type: "edu" | "list" | "map"
+    field: string
     edu?: iFieldEduData
     list?: iFieldListData
     map?: iFieldMapData

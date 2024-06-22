@@ -1,0 +1,79 @@
+.field {
+    display: flex;
+    padding: 12px 20px;
+    gap: 32px;
+    font-size: 20px;
+
+    &__key {
+        font-size: 26px;
+    }
+}
+
+.edu {
+    display: flex;
+    gap: 20px;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-right: 16px;
+        border-right: 4px solid rgb(var(--black-300));
+
+        & > :nth-child(1) {
+            font-size: 26px;
+            font-weight: 700;
+            color: rgb(var(--black-800));
+        }
+
+        & > :nth-child(2) {
+            font-weight: 300;
+            color: rgb(var(--black-500));
+        }
+    }
+
+    &__details {
+        display: grid;
+        grid-auto-flow: column;
+        grid-column-gap: 20px;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        align-content: space-between;
+
+        li {
+            display: flex;
+            span {
+                display: block;
+                min-width: 62px;
+            }
+        }
+    }
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    li {
+        display: flex;
+        span {
+            display: block;
+            min-width: 62px;
+        }
+    }
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    li {
+        display: flex;
+        span {
+            display: block;
+            min-width: 62px;
+        }
+    }
+}

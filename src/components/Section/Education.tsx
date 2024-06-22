@@ -37,13 +37,18 @@ const Education = () => {
     return (
         <section
             id="education"
-            className={`${styles.layout} ${styles.introduction}`}
+            className={`${styles.layout} ${styles.education}`}
         >
             <Divider category="Education" />
 
             {fieldList.map(({ field, type, data }) => {
                 return (
-                    <EduField key={field} type={type} {...{ [type]: data }} />
+                    <EduField
+                        key={field}
+                        field={field}
+                        type={type}
+                        {...{ [type]: data }}
+                    />
                 )
             })}
         </section>
