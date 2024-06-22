@@ -4,6 +4,8 @@ import Introduction from "./components/Section/Introduction"
 import Skills from "./components/Section/Skills"
 import Work from "components/Section/Work"
 import Project from "components/Section/Project"
+import Education from "./components/Section/Education"
+import Contact from "./components/Section/Contact"
 const App = () => {
     return (
         <>
@@ -13,6 +15,8 @@ const App = () => {
             <Skills />
             <Work />
             <Project />
+            <Education />
+            <Contact />
         </>
     )
 }

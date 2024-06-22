@@ -10,6 +10,6 @@ export interface iDivider {
 }
 
 export interface iButton {
-    iconName: string,
+    iconName: string
     link?: string
 }
