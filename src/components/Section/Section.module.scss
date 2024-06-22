@@ -59,3 +59,57 @@
 .education {
     gap: 30px;
 }
+
+.contact {
+    gap: 30px;
+    font-size: 20px;
+
+    &__container {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+    }
+
+    &__message {
+        $triangle: 18px;
+
+        position: relative;
+        display: flex;
+        width: 340px;
+        height: 100%;
+        padding: 14px 19px;
+        margin-bottom: $triangle;
+        justify-content: center;
+
+        font-size: 26px;
+        font-weight: 200;
+
+        border-radius: 30px;
+        background: rgb(var(--other-white));
+        filter: drop-shadow(0px 0px 17px rgba(24, 53, 58, 0.2));
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+
+            left: 50%;
+            top: 100%;
+
+            transform: translate(-50%);
+            border-top: $triangle solid rgb(var(--other-white));
+            border-left: $triangle solid transparent;
+            border-right: $triangle solid transparent;
+        }
+    }
+
+    i {
+        font-size: 60px;
+        color: rgb(var(--black-400));
+    }
+}
