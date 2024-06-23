@@ -9,16 +9,19 @@ const Header = () => {
             <header className={styles.layout}>
                 <div className={styles.container}>
                     <div className={styles.rundown}>
-                        <p>
-                            안녕하세요 <br />
-                            <span>웹 프론트엔드</span> 개발자 <br />
-                            강다현 입니다.
-                        </p>
+                        <ul>
+                            <li>안녕하세요</li>
+                            <li className="appeal">
+                                <span>웹 프론트엔드</span>개발자
+                            </li>
+                            <li>강다현 입니다.</li>
+                        </ul>
                         <div className={styles.rundown__tag}>
                             <Tag
                                 type="glow"
                                 color="none"
                                 message={tagMessage}
+                                fontSize={18}
                             />
                         </div>
                     </div>

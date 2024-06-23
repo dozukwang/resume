@@ -54,10 +54,13 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%;
 }
 
 #resume {
+    width: 100%;
     max-width: 1060px;
+    overflow: hidden;
 }
 
 :root {

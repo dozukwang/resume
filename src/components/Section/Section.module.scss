@@ -1,11 +1,17 @@
+@import "src/styles/utils/_mixin.scss";
+
 .layout {
     border: 1px solid red;
     max-width: 1060px;
     width: 100%;
     padding: 42px 70px;
-    gap: 16px;
     display: flex;
     flex-direction: column;
+    gap: 16px;
+
+    @mixin mobile {
+        padding: 42px 20px;
+    }
 }
 
 .introduction {
