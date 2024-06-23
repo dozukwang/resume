@@ -1,13 +1,16 @@
 .navigation {
-    display: flex;
     position: sticky;
     top: 0;
+
     width: 100%;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    padding: 0 20px;
-    gap: 12px;
+    height: 54px;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
     background-color: rgba(var(--other-white), 0.8);
     backdrop-filter: blur(4px);
@@ -27,6 +30,18 @@
         opacity: 0.6;
 
         pointer-events: none;
+    }
+
+    &__wrapper {
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        width: fit-content;
+        height: 100%;
+        padding: 0px 20px;
     }
 
     a {

@@ -12,6 +12,7 @@
     min-height: 400px;
     width: 100%;
     padding: 72px 70px 40px;
+    overflow-x: hidden;
 
     @include mobile {
         padding: 80px 20px 0;
