@@ -1,3 +1,5 @@
+@import "src/styles/utils/_mixin.scss";
+
 .skillCard {
     display: flex;
     flex-direction: column;
@@ -12,10 +14,30 @@
         align-items: center;
         width: 152px;
         gap: 8px;
+        font-size: 20px;
 
         img {
             width: 40px;
             aspect-ratio: 1;
+        }
+    }
+
+    @include mobile() {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        height: fit-content;
+        min-width: 165px;
+        padding: 12px;
+        flex: 1 0 0;
+
+        &__logo {
+            font-size: 16px;
+            line-height: 30px;
+
+            img {
+                width: 26px;
+            }
         }
     }
 }
@@ -30,6 +52,14 @@
     img {
         width: 40px;
         aspect-ratio: 1;
+    }
+
+    @include mobile() {
+        font-size: 16px;
+
+        img {
+            width: 26px;
+        }
     }
 }
 
@@ -52,6 +82,11 @@
             height: 10px;
             border-radius: 100%;
         }
+
+        @include mobile() {
+            height: fit-content;
+            line-height: 20px;
+        }
     }
 
     &__progress {
@@ -69,6 +104,10 @@
             bottom: 0;
             border-radius: 8px;
         }
+
+        @include mobile() {
+            display: none;
+        }
     }
 
     $progressColor: (
@@ -82,7 +121,7 @@
         ),
         "used": (
             color: rgb(var(--black-300)),
-            right: 70%
+            right: 60%
         )
     );
 
