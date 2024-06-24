@@ -7,16 +7,45 @@
 }
 
 .layout {
+    position: relative;
     display: flex;
     max-width: 1060px;
     min-height: 400px;
     width: 100%;
     padding: 72px 70px 40px;
     overflow-x: hidden;
+    background-color: white;
+    z-index: -3;
 
     @include mobile {
         padding: 80px 20px 0;
         height: 850px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("/../public/images/gradient.svg");
+        background-repeat: no-repeat;
+        background-position: left -740px top -502px;
+        z-index: -2;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("/../public/images/noise.png");
+        background-repeat: repeat-y;
+        mix-blend-mode: color-burn;
+        opacity: 0.4;
     }
 }
 
