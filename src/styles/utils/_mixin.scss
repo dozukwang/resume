@@ -11,20 +11,22 @@ $mobile: 340px;
 $tablet: 744px;
 $desktop: 1060px;
 
-@mixin mobile {
-    @media screen and (min-width: #{mobile}) and (max-width: #{tablet}) {
+@mixin mobile($custom: null) {
+    $max-width: if($custom, $custom, $tablet);
+
+    @media screen and (max-width: #{$max-width}) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media screen and (min-width: #{tablet}) and (max-width: #{desktop}) {
+    @media screen and (min-width: #{$tablet}) and (max-width: #{$desktop}) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media screen and (min-width: #{desktop}) {
+    @media screen and (min-width: #{$desktop}) {
         @content;
     }
 }

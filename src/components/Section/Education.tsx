@@ -35,11 +35,8 @@ const Education = () => {
     ]
 
     return (
-        <section
-            id="education"
-            className={`${styles.layout} ${styles.education}`}
-        >
-            <Divider category="Education" />
+        <section id="other" className={`${styles.layout} ${styles.education}`}>
+            <Divider category="Other Information" />
 
             {fieldList.map(({ field, type, data }) => {
                 return (

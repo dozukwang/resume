@@ -13,7 +13,10 @@ const WorkDetail = ({ history }: iWorkDetail) => {
     return (
         <div className={styles.detail}>
             <div className={styles.detail__company}>
-                <h2>{history.company}</h2>
+                <div>
+                    <h2>{history.company}</h2>
+                    {history.companyDetail && <h2>{history.companyDetail}</h2>}
+                </div>
                 <h4>{`${history.team} • ${history.position}`}</h4>
             </div>
             {Object.entries(history.details).map(([key, words]) => {

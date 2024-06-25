@@ -6,6 +6,7 @@ export interface iWorkHistory {
     startDate: Date
     endDate?: Date
     company: string
+    companyDetail?: string
     team: string
     position: string
     details: iDetails

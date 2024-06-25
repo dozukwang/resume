@@ -1,3 +1,5 @@
+@import "src/styles/utils/_mixin.scss";
+
 .period {
     font-size: 22px;
     width: 150px;
@@ -17,6 +19,14 @@
     &--end {
         text-align: right;
     }
+
+    @include mobile() {
+        flex-direction: row;
+        align-items: center;
+        min-width: fit-content;
+        width: 100%;
+        gap: 8px;
+    }
 }
 
 .detail {
@@ -28,6 +38,7 @@
     h4 {
         color: rgb(var(--black-500));
         font-size: 20px;
+        line-height: normal;
         font-weight: 300;
     }
 
@@ -35,6 +46,15 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+        div:first-child {
+            display: flex;
+            min-width: fit-content;
+
+            @include mobile() {
+                flex-direction: column;
+            }
+        }
     }
 }
 
@@ -81,5 +101,20 @@
         height: 40px;
         gap: 10px;
         flex-wrap: wrap;
+    }
+
+    @include mobile() {
+        flex-direction: column;
+        gap: 16px;
+
+        p,
+        li,
+        div {
+            font-size: 18px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
     }
 }

@@ -12,12 +12,7 @@ const SkillCard = ({ detail, type = "card" }: iSkillCard) => {
                     }}
                     className={styles.skillCard}
                 >
-                    <div
-                        style={{
-                            fontSize: detail.fontSize ?? "24px"
-                        }}
-                        className={styles.skillCard__logo}
-                    >
+                    <div className={styles.skillCard__logo}>
                         <img
                             src={`/images/logo/${detail.img}.png`}
                             alt={detail.img}

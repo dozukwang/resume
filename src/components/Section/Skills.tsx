@@ -66,12 +66,12 @@ const Skills = () => {
             {
                 name: "Figma",
                 img: "figma",
-                level: "used"
+                level: "normal"
             },
             {
                 name: "Photoshop",
                 img: "photoshop",
-                level: "used",
+                level: "normal",
                 fontSize: "20px"
             }
         ]
