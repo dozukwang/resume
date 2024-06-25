@@ -10,7 +10,8 @@ const Work = () => {
             working: false,
             startDate: new Date("2022.04"),
             endDate: new Date("2024.06"),
-            company: "Cloudraw(한국정보보호경영연구소)",
+            company: "Cloudraw",
+            companyDetail: "(한국정보보호경영연구소)",
             team: "R&D부서",
             position: "Frontend Unit Leader",
             details: {

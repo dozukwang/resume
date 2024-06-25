@@ -1,7 +1,6 @@
 @import "src/styles/utils/_mixin.scss";
 
 .layout {
-    border: 1px solid red;
     max-width: 1060px;
     width: 100%;
     padding: 42px 70px;
@@ -75,6 +74,14 @@
         display: flex;
         padding: 30px 20px;
         gap: 30px;
+    }
+
+    @include mobile() {
+        &__detail {
+            padding: 30px 0;
+            flex-direction: column;
+            gap: 30px;
+        }
     }
 }
 

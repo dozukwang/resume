@@ -11,8 +11,10 @@ $mobile: 340px;
 $tablet: 744px;
 $desktop: 1060px;
 
-@mixin mobile {
-    @media screen and (max-width: #{$tablet}) {
+@mixin mobile($custom: null) {
+    $max-width: if($custom, $custom, $tablet);
+
+    @media screen and (max-width: #{$max-width}) {
         @content;
     }
 }

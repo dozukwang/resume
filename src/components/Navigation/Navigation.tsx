@@ -9,7 +9,7 @@ const Navigation = () => {
         { ref: "skills", name: "기술스택" },
         { ref: "work_experience", name: "경력" },
         { ref: "project", name: "프로젝트" },
-        { ref: "education", name: "교육" }
+        { ref: "other", name: "기타 사항" }
     ]
 
     const changeCurrentSection = (event: BaseSyntheticEvent) => {

@@ -1,3 +1,5 @@
+@import "src/styles/utils/_mixin.scss";
+
 .period {
     font-size: 22px;
     width: 150px;
@@ -6,9 +8,18 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+    font-weight: 600;
 
     &--end {
         text-align: right;
+    }
+
+    @include mobile() {
+        flex-direction: row;
+        min-width: fit-content;
+        width: 100%;
+        align-items: flex-start;
+        gap: 10px;
     }
 }
 
@@ -102,6 +113,23 @@
                 left: 0;
                 top: 0;
                 line-height: inherit;
+            }
+        }
+    }
+
+    @include mobile() {
+        &__project {
+            gap: 20px;
+            &__header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+
+        &__task {
+            &__list {
+                font-size: 18px;
             }
         }
     }

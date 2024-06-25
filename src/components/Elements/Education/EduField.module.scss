@@ -1,3 +1,5 @@
+@import "src/styles/utils/_mixin.scss";
+
 .field {
     display: flex;
     padding: 12px 20px;
@@ -6,6 +8,13 @@
 
     &__key {
         font-size: 26px;
+        min-width: fit-content;
+    }
+
+    @include mobile {
+        padding: 12px 0;
+        flex-direction: column;
+        gap: 20px;
     }
 }
 
@@ -48,6 +57,18 @@
             }
         }
     }
+
+    @include mobile(840px) {
+        flex-direction: column;
+        &__info {
+            border-right: none;
+        }
+        &__details {
+            grid-row-gap: 20px;
+            grid-template-rows: repeat(3, auto);
+            grid-template-columns: repeat(1, auto);
+        }
+    }
 }
 
 .list {
@@ -62,6 +83,10 @@
             min-width: 62px;
         }
     }
+
+    @include mobile() {
+        gap: 12px;
+    }
 }
 
 .map {
@@ -75,5 +100,9 @@
             display: block;
             min-width: 62px;
         }
+    }
+
+    @include mobile() {
+        gap: 12px;
     }
 }
