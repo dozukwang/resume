@@ -1,6 +1,7 @@
 import { iProejctDetail, iProject } from "data/Elements/Project/Project"
 import styles from "./Project.module.scss"
 import Button from "../Button"
+import Tooltip from "../Tooltip"
 
 const ProjectDetail = ({ project }: iProejctDetail) => {
     return (
@@ -10,13 +11,17 @@ const ProjectDetail = ({ project }: iProejctDetail) => {
                     <h2>{project.project}</h2>
                     <div className={styles.detail__project__buttonGroup}>
                         {project.url && (
-                            <Button iconName="ri-link" link={project.url} />
+                            <Tooltip message={"서비스 바로가기"}>
+                                <Button iconName="ri-link" link={project.url} />
+                            </Tooltip>
                         )}
                         {project.sample && (
-                            <Button
-                                iconName="ri-image-line"
-                                link={project.sample}
-                            />
+                            <Tooltip message="작업물 미리보기">
+                                <Button
+                                    iconName="ri-image-line"
+                                    link={project.sample}
+                                />
+                            </Tooltip>
                         )}
                     </div>
                 </div>

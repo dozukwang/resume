@@ -1,3 +1,5 @@
+@import "src/styles/utils/_mixin.scss";
+
 .tag {
     display: flex;
     min-width: fit-content;
@@ -10,13 +12,13 @@
 
     // type
     &[data-type="period"] {
-        padding: 3px, 14px;
+        padding: 3px 14px;
         border: 2px solid rgb(var(--red-600));
         color: rgb(var(--red-600));
     }
 
     &[data-type="glow"] {
-        box-shadow: 1px 2px 4.6px 0px rgba(244, 88, 88, 0.2) inset;
+        box-shadow: 1px 2px 4.6px 0 rgba(244, 88, 88, 0.2) inset;
         font-weight: 300;
     }
 
@@ -74,5 +76,91 @@
         bottom: 0;
         right: 0;
         left: 0;
+    }
+}
+
+@mixin floatAnimation {
+    animation-name: float;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+
+    @include mobile {
+        animation-name: floatMobile;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translate3d(-50%, -110%, 0);
+    }
+    100% {
+        transform: translate3d(-50%, -130%, 0);
+    }
+}
+
+@keyframes floatMobile {
+    0% {
+        transform: translate3d(-50%, 110%, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 130%, 0);
+    }
+}
+
+.tooltip {
+    position: relative;
+
+    $borderColor: rgb(var(--red-800));
+    $backgroundColor: rgba(var(--red-600));
+
+    &__tipBox {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate3d(-50%, -110%, 0);
+        padding: 6px 8px;
+        background: $backgroundColor;
+        border-radius: 6px;
+        z-index: 100;
+        @include floatAnimation;
+    }
+
+    &__tip {
+        text-align: center;
+        color: rgb(var(--other-white));
+        font-size: 12px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: calc(-50% + 4px);
+            left: 50%;
+            transform: translate3D(-50%, 0, 0);
+            border-top: 8px solid $backgroundColor;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+        }
+    }
+
+    @include mobile {
+        &__tipBox {
+            top: unset;
+            bottom: 0;
+            transform: translate3d(-50%, 110%, 0);
+        }
+        &__tip {
+            &::before {
+                bottom: unset;
+                top: calc(-50% + 4px);
+                transform: translate3D(-50%, 0, 0);
+                border-top: 8px solid transparent;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-bottom: 8px solid $backgroundColor;
+            }
+        }
     }
 }

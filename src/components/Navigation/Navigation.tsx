@@ -13,7 +13,13 @@ const Navigation = () => {
     ]
 
     const changeCurrentSection = (event: BaseSyntheticEvent) => {
+        event.preventDefault()
         setSection(event.target.innerText)
+
+        const targetId = event.target.hash.replace("#", "")
+        const target = document.getElementById(targetId)
+
+        if (target) target.scrollIntoView({ behavior: "smooth" })
     }
 
     return (

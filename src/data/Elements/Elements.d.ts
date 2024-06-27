@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 export interface iTag {
     type: "default" | "period" | "glow"
     color: "red" | "pink" | "gray" | "none"
@@ -12,4 +14,9 @@ export interface iDivider {
 export interface iButton {
     iconName: string
     link?: string
+}
+
+export interface iTooltip {
+    children: ReactNode
+    message: string
 }
