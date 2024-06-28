@@ -9,28 +9,28 @@
     &::-webkit-scrollbar {
         display: none;
     }
+
     -ms-overflow-style: none;
     scrollbar-width: none;
 
-    background-color: rgba(var(--other-white), 0.8);
+    background-color: rgba(var(--black-50), 0.8);
     backdrop-filter: blur(4px);
 
     z-index: 100;
-
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-
-        background-image: url("/../public/images/nav_noise.png");
-        mix-blend-mode: color-burn;
-        opacity: 0.6;
-
-        pointer-events: none;
-    }
+    //
+    //&::after {
+    //    content: "";
+    //    position: absolute;
+    //    top: 0;
+    //    bottom: 0;
+    //    right: 0;
+    //    left: 0;
+    //    background-image: url("/../public/images/nav_noise.png");
+    //    mix-blend-mode: color-burn;
+    //    //opacity: 0.6;
+    //
+    //    pointer-events: none;
+    //}
 
     &__wrapper {
         margin: 0 auto;
@@ -41,7 +41,7 @@
 
         width: fit-content;
         height: 100%;
-        padding: 0px 20px;
+        //padding: 0 20px;
     }
 
     a {
