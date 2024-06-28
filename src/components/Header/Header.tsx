@@ -18,8 +18,9 @@ const Header = () => {
         "책임과 성실의"
     ]
     const tagMessage = ["경력2년", "끊임없이 고민하고", "노력해요"]
-
     useGSAP(() => {
+        gsap.registerPlugin(CustomEase)
+
         const timeline = gsap.timeline()
         timeline
             .to(handRef.current.rightHand, {
@@ -111,8 +112,10 @@ const Header = () => {
                                         >
                                             {updateAppealMessage(
                                                 appealMessage
-                                            ).map((appeal) => (
-                                                <span>{appeal}</span>
+                                            ).map((appeal, index) => (
+                                                <span key={appeal + index}>
+                                                    {appeal}
+                                                </span>
                                             ))}
                                         </div>
                                     </div>
