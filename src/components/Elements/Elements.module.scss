@@ -135,7 +135,7 @@
         &::before {
             content: "";
             position: absolute;
-            bottom: calc(-50% + 4px);
+            bottom: calc(-50% + 6px);
             left: 50%;
             transform: translate3D(-50%, 0, 0);
             border-top: 8px solid $backgroundColor;
@@ -154,7 +154,7 @@
         &__tip {
             &::before {
                 bottom: unset;
-                top: calc(-50% + 4px);
+                top: calc(-50% + 6px);
                 transform: translate3D(-50%, 0, 0);
                 border-top: 8px solid transparent;
                 border-left: 8px solid transparent;

@@ -22,7 +22,7 @@ const EduField = ({ type, field, edu, list, map }: tField) => {
                         <ul className={styles.edu__details}>
                             {Object.entries(edu.details).map(
                                 ([key, detail]) => (
-                                    <li>
+                                    <li key={detail}>
                                         <span>{key}</span>
                                         {detail}
                                     </li>

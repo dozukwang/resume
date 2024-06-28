@@ -36,14 +36,17 @@ const ProjectDetail = ({ project }: iProejctDetail) => {
             <div className={styles.detail__task}>
                 {project.details.map((detail: iProject, index) => {
                     return (
-                        <div className={styles.detail__task__box}>
+                        <div
+                            key={detail.task}
+                            className={styles.detail__task__box}
+                        >
                             <div className={styles.detail__task__header}>
                                 <span>{index + 1}</span>
                                 {detail.task}
                             </div>
                             <ul className={styles.detail__task__list}>
                                 {detail.details.map((work: string) => (
-                                    <li>{work}</li>
+                                    <li key={work}>{work}</li>
                                 ))}
                             </ul>
                         </div>

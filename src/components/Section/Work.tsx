@@ -99,7 +99,7 @@ const Work = () => {
             <Divider category="Work Experience" />
             <div>
                 {workHistory.map((history) => (
-                    <div className={styles.work__detail}>
+                    <div key={history.company} className={styles.work__detail}>
                         <WorkPeriod
                             working={history.working}
                             startDate={history.startDate}

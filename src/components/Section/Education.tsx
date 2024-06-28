@@ -31,6 +31,11 @@ const Education = () => {
                 "리눅스 마스터 2급",
                 "NCA, NCP(네이버 클라우드 자격증)"
             ]
+        },
+        {
+            field: "활동",
+            type: "list",
+            data: ["패스트캠퍼스의 FE 부트캠프 9기 멘토"]
         }
     ]
 

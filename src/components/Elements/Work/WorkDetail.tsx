@@ -22,7 +22,7 @@ const WorkDetail = ({ history }: iWorkDetail) => {
             {Object.entries(history.details).map(([key, words]) => {
                 const index = key as keyof iDetails
                 return (
-                    <div className={styles.details}>
+                    <div key={index} className={styles.details}>
                         <div className={styles.details__index}>
                             <h3>{indexList[index]}</h3>
                         </div>
@@ -36,7 +36,7 @@ const WorkDetail = ({ history }: iWorkDetail) => {
                         {index === "task" && (
                             <ul className={styles.details__task}>
                                 {words.map((task: string) => (
-                                    <li>{task}</li>
+                                    <li key={task}>{task}</li>
                                 ))}
                             </ul>
                         )}
@@ -44,7 +44,7 @@ const WorkDetail = ({ history }: iWorkDetail) => {
                         {index === "else" && (
                             <div>
                                 {words.map((word: string) => (
-                                    <div>{word}</div>
+                                    <div key={word}>{word}</div>
                                 ))}
                             </div>
                         )}
